@@ -51,8 +51,6 @@
       <h2>Photo</h2>
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Burna_Boy_at_SXSW_2019.jpg" width="300" alt="Burna Boy" />
     </section>
-
-    <p><a href="index.html">← Back to My Bio Page</a></p>
   </main>
 </body>
 </html>
