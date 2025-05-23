@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Favorite Artist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      height: auto;
+    }
+    a {
+      text-decoration: none;
+      color: #3498db;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>My Favorite Artist: Burna Boy</h1>
+
+    <section>
+      <p>Burna Boy is a Nigerian Afro-fusion artist known for his powerful lyrics and energetic beats.</p>
+      <p>He won a Grammy and put African music on the world stage.</p>
+    </section>
+
+    <section>
+      <h2>Top 3 Songs</h2>
+      <ul>
+        <li>Last Last</li>
+        <li>Ye</li>
+        <li>Gbona</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Photo</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Burna_Boy_at_SXSW_2019.jpg" width="300" alt="Burna Boy" />
+    </section>
+
+    <p><a href="index.html">← Back to My Bio Page</a></p>
+  </main>
+</body>
+</html>
