@@ -1,57 +1,299 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
-   <style>
-   body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 50px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vic Code Portfolio</title>
+  <style>
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-h1 {
-  color: #3366cc;
-  font-size: 36px;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #eee;
+      line-height: 1.6;
+    }
 
-/* Mobile screen styles */
-@media (max-width: 600px) {
-  body {
-    padding: 20px;
-  }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
 
-  h1 {
-    font-size: 24px;
-  }
-     }
-</style>
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #00bcd4;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-style: italic;
+      color: #00bcd4;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Hero */
+    #hero {
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    #hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #00bcd4;
+    }
+
+    #hero p {
+      font-size: 1.3rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Skills */
+    #skills {
+      margin-top: 60px;
+    }
+
+    #skills h3 {
+      color: #00bcd4;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    #skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    #skills ul li {
+      background: #333;
+      padding: 10px 15px;
+      border-radius: 8px;
+      flex: 1 0 120px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 0 5px #00bcd4;
+      transition: background 0.3s ease;
+    }
+
+    #skills ul li:hover {
+      background: #00bcd4;
+      color: #121212;
+      cursor: default;
+    }
+
+    /* Projects */
+    #projects {
+      margin-top: 60px;
+    }
+
+    #projects h3 {
+      color: #00bcd4;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #222;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 8px #00bcd4;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card h4 {
+      margin-bottom: 10px;
+      color: #00bcd4;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #bbb;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #00bcd4;
+      color: #121212;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background: #4dd0e1;
+    }
+
+    /* Contact */
+    #contact {
+      margin-top: 60px;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    #contact h3 {
+      color: #00bcd4;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    #contact a {
+      font-weight: bold;
+      color: #00bcd4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f1f1f;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      border-top: 2px solid #00bcd4;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      #skills ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
-  <body>
-    <h1>Hello, I'm [Your Name]</h1>
+<body>
 
-    <p>I’m from [Your Country]. I enjoy learning new skills and exploring tech.</p>
+  <header>
+    <h1>Vic Code</h1>
+    <p>Clean Code. Smart Solutions.</p>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <h2>My Hobbies</h2>
+  <section id="hero">
+    <h2>Hello, I'm Mean Code</h2>
+    <p>I'm a passionate developer specializing in full-stack JavaScript development with the MEAN stack (MongoDB, Express, Angular, Node.js). Check out my skills and projects below.</p>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
     <ul>
-      <li>Reading</li>
-      <li>Gaming</li>
-      <li>Coding</li>
+      <li>MongoDB</li>
+      <li>Express.js</li>
+      <li>Angular</li>
+      <li>Node.js</li>
+      <li>JavaScript</li>
+      <li>HTML & CSS</li>
+      <li>REST APIs</li>
+      <li>Git & GitHub</li>
     </ul>
+  </section>
 
-    <h2>My Favorite Website</h2>
-    <p>
-      Visit <a href="https://freecodecamp.org" target="_blank">FreeCodeCamp</a> — it’s great for learning!
-    </p>
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="project-list">
+      <div class="project-card">
+        <h4>Task Manager App</h4>
+        <p>A full-stack MEAN application for managing tasks with authentication and real-time updates.</p>
+        <a href="https://github.com/yourusername/task-manager" target="_blank" rel="noopener noreferrer">View Code</a>
+      </div>
+      <div class="project-card">
+        <h4>Blog Platform</h4>
+        <p>A blogging platform built with Angular frontend and Node.js/Express backend with MongoDB database.</p>
+        <a href="https://github.com/yourusername/blog-platform" target="_blank" rel="noopener noreferrer">View Code</a>
+      </div>
+      <div class="project-card">
+        <h4>E-commerce Website</h4>
+        <p>A simple e-commerce site featuring product listings, cart, and checkout functionality.</p>
+        <a href="https://github.com/yourusername/ecommerce-mean" target="_blank" rel="noopener noreferrer">View Code</a>
+      </div>
+    </div>
+  </section>
 
-    <h2>My Profile Picture</h2>
-    <img src="https://via.placeholder.com/150" alt="My Photo" />
-    <p>
-    Want to know my favorite artist? 
-    <a href="my-fav-artist.html">Click here!</a>
-    </p>
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <p>Email: <a href="mailto:meancode@example.com">meancode@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+  </section>
 
-  </body>
+  <footer>
+    &copy; 2025 Mean Code. All rights reserved.
+  </footer>
+
+</body>
 </html>
